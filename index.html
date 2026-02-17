@@ -305,6 +305,26 @@
   </div>
 </footer>
 
+<!-- ============================= Product Details Modal: Dynamic View ==================== -->
+<div id="product-modal"
+  class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+
+  <!-- Modal Container with Scale-in Animation Target (modal-box) -->
+  <div id="modal-box"
+    class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl transition-transform duration-300 scale-95">
+
+    <!-- Close Button -->
+    <button onclick="closeModal()"
+      class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 z-10 transition-colors">
+      <i class="fa-solid fa-circle-xmark text-2xl"></i>
+    </button>
+
+    <!-- Target for JS Content Injection -->
+    <div id="modal-content" class="p-8">
+      <!-- Dynamic product data loads here -->
+    </div>
+  </div>
+</div>
 
   <script src="./js/app.js"></script>
 </body>

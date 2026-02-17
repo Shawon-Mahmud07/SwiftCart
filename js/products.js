@@ -87,7 +87,7 @@ async function fetchAndDisplayProducts(url) {
                     <h3 class="text-gray-800 font-semibold text-base mb-2 line-clamp-1">${product.title}</h3>
                     <p class="text-gray-900 font-extrabold text-xl mb-5">$${product.price}</p>
                     <div class="flex gap-3 mt-auto">
-                        <button class="flex-1 border border-gray-300 py-2 rounded-lg flex items-center justify-center gap-2 text-sm font-bold text-gray-700 hover:bg-gray-50 transition-colors">
+                        <button onclick="showProductDetails(${product.id})" class="flex-1 border border-gray-300 py-2 rounded-lg flex items-center justify-center gap-2 text-sm font-bold text-gray-700 hover:bg-gray-50 transition-colors">
                             <i class="fa-regular fa-eye"></i> Details
                         </button>
                         <button class="flex-1 bg-[#4F46E5] hover:bg-[#4338CA] text-white py-2 rounded-lg flex items-center justify-center gap-2 text-sm font-bold transition-all shadow-md active:scale-95">
@@ -108,3 +108,70 @@ async function fetchAndDisplayProducts(url) {
 // Initialization
 loadCategories();
 fetchAndDisplayProducts("https://fakestoreapi.com/products");
+
+
+
+
+
+
+
+/**
+ * Fetches single product data and displays it in a stylized modal
+ */
+async function showProductDetails(id) {
+    const modal = document.getElementById('product-modal');
+    const modalBox = document.getElementById('modal-box');
+    const modalContent = document.getElementById('modal-content');
+    
+    // Open modal and apply scale-in animation
+    modal.classList.remove('hidden');
+    setTimeout(() => modalBox.classList.remove('scale-95'), 10);
+    
+    // Loading state
+    modalContent.innerHTML = `<div class="p-20 text-center"><span class="loading loading-spinner loading-lg text-indigo-600"></span></div>`;
+
+    try {
+        const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+        const product = await res.json();
+
+        // Inject dynamic product details into modal body
+        modalContent.innerHTML = `
+            <div class="flex flex-col md:flex-row gap-8 p-8 text-left">
+                <div class="md:w-1/2 bg-gray-100 rounded-2xl p-6 flex items-center justify-center">
+                    <img src="${product.image}" class="max-h-72 object-contain">
+                </div>
+                <div class="md:w-1/2 flex flex-col">
+                    <span class="text-indigo-600 font-bold text-xs uppercase tracking-widest mb-2">${product.category}</span>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">${product.title}</h2>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="flex text-yellow-400"><i class="fa-solid fa-star"></i></div>
+                        <span class="font-bold text-gray-700">${product.rating.rate}</span>
+                        <span class="text-gray-400 text-sm">(${product.rating.count} reviews)</span>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">${product.description}</p>
+                    <div class="mt-auto">
+                        <p class="text-3xl font-black text-gray-900 mb-6">$${product.price}</p>
+                        <div class="flex gap-4">
+                            <button class="flex-1 bg-[#4F46E5] text-white py-4 rounded-xl font-bold hover:bg-[#4338CA] transition-all shadow-lg active:scale-95">
+                                Buy Now
+                            </button>
+                            <button class="px-6 py-4 border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors">
+                                <i class="fa-solid fa-cart-plus text-gray-700 text-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    } catch (error) {
+        modalContent.innerHTML = `<p class="p-10 text-center text-red-500">Something went wrong!</p>`;
+    }
+}
+
+/**
+ * Hides the product details modal
+ */
+function closeModal() {
+    const modal = document.getElementById('product-modal');
+    modal.classList.add('hidden');
+}
