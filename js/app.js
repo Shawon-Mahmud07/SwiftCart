@@ -38,13 +38,16 @@ async function fetchTrendingProducts() {
                     <h3 class="text-gray-800 font-semibold text-base mb-2 line-clamp-1">${product.title}</h3>
                     <p class="text-gray-900 font-extrabold text-xl mb-5">$${product.price}</p>
                     <div class="flex gap-3 mt-auto">
-                        <button class="flex-1 border border-gray-300 py-2 rounded-lg flex items-center justify-center gap-2 text-sm font-bold text-gray-700 hover:bg-gray-50 transition-colors">
-                            Details
-                        </button>
-                        <button class="flex-1 bg-[#4F46E5] hover:bg-[#4338CA] text-white py-2 rounded-lg flex items-center justify-center gap-2 text-sm font-bold transition-all shadow-md">
-                            Add
-                        </button>
-                    </div>
+    <button class="flex-1 border border-gray-300 py-2 rounded-lg flex items-center justify-center gap-2 text-sm font-bold text-gray-700 hover:bg-gray-50 transition-colors">
+        <i class="fa-regular fa-eye"></i>
+        Details
+    </button>
+    
+    <button class="flex-1 bg-[#4F46E5] hover:bg-[#4338CA] text-white py-2 rounded-lg flex items-center justify-center gap-2 text-sm font-bold transition-all shadow-md active:scale-95">
+        <i class="fa-solid fa-cart-shopping text-xs"></i>
+        Add
+    </button>
+</div>
                 </div>
             `;
 
