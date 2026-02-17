@@ -75,46 +75,135 @@
     </nav>
   </header>
 
-<main>
-  <!-- Hero Section: Background Image with Gradient Overlay -->
-  <section class="relative min-h-[620px] lg:min-h-[650px] flex items-center overflow-hidden">
 
-    <!-- Background Visuals -->
-    <div class="absolute inset-0 z-0">
-      <img src="./assets/banner-image.png" alt="Fashion Banner" class="w-full h-full object-cover object-center">
-      <!-- Responsive Gradient for Text Readability -->
-      <div
-        class="absolute inset-0 bg-gradient-to-r from-[#121a29] via-black/70 to-transparent">
-      </div>
-    </div>
+<!-- Hero Section -->
+  <main>
+    <!-- Hero Section: Background Image with Gradient Overlay -->
+    <section class="relative min-h-[620px] lg:min-h-[650px] flex items-center overflow-hidden">
 
-    <!-- Content Container -->
-    <div class="container mx-auto pl-4 lg:px-2 z-10">
-      <div class="max-w-2xl lg:max-w-4xl text-left text-white">
-
-        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6 lg:tracking-tight">
-          Best Collection For You
-        </h1>
-
-        <p
-          class="text-lg lg:text-xl text-gray-200 mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed font-light">
-          Discover the latest trends in fashion, electronics, and more. Shop with confidence and style at SwiftCart.
-        </p>
-
-        <!-- Call to Action -->
-        <div >
-          <button
-            class="px-5 py-2 lg:px-10 lg:py-4 bg-[#4F46E5] hover:bg-[#4338CA] text-white font-bold text-lg rounded-lg shadow-[0_10px_20px_-5px_rgba(79,70,229,0.4)] transition-all transform hover:-translate-y-1 active:scale-95 cursor-pointer">
-            Shop Now
-          </button>
+      <!-- Background Visuals -->
+      <div class="absolute inset-0 z-0">
+        <img src="./assets/banner-image.png" alt="Fashion Banner" class="w-full h-full object-cover object-center">
+        <!-- Responsive Gradient for Text Readability -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#121a29] via-black/70 to-transparent">
         </div>
+      </div>
 
+      <!-- Content Container -->
+      <div class="container mx-auto pl-4 lg:px-2 z-10">
+        <div class="max-w-2xl lg:max-w-4xl text-left text-white">
+
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6 lg:tracking-tight">
+            Best Collection For You
+          </h1>
+
+          <p class="text-lg lg:text-xl text-gray-200 mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed font-light">
+            Discover the latest trends in fashion, electronics, and more. Shop with confidence and style at SwiftCart.
+          </p>
+
+          <!-- Call to Action -->
+          <div>
+            <button
+              class="px-5 py-2 lg:px-10 lg:py-4 bg-[#4F46E5] hover:bg-[#4338CA] text-white font-bold text-lg rounded-lg shadow-[0_10px_20px_-5px_rgba(79,70,229,0.4)] transition-all transform hover:-translate-y-1 active:scale-95 cursor-pointer">
+              Shop Now
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6 lg:px-12">
+  
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-extrabold text-[#121a29] mb-4">Why Choose Us</h2>
+        <p class="text-gray-500 ">We provide the best shopping experience with top-notch services.</p>
+      </div>
+  
+      <!-- Feature Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+  
+        <!-- Delivery Card -->
+        <div
+          class="relative p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
+          <!-- Floating Icon Container -->
+          <div
+            class="absolute -top-8 left-8 w-16 h-16 border-3 border-white bg-indigo-50 rounded-2xl flex items-center justify-center shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <div class="mt-4">
+            <h3 class="text-xl font-semibold text-[#121a29] mb-3">Fast Delivery</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Get your orders delivered to your doorstep quickly and
+              efficiently.</p>
+          </div>
+        </div>
+  
+        <!-- Support Card -->
+        <div
+          class="relative p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
+          <div
+            class="absolute -top-8 left-8 w-16 h-16 border-3 border-white bg-indigo-50 rounded-2xl flex items-center justify-center shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+          </div>
+          <div class="mt-4">
+            <h3 class="text-xl font-semibold text-[#121a29] mb-3">24/7 Support</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Our support team is available around the clock to assist you
+              anytime.</p>
+          </div>
+        </div>
+  
+        <!-- Security Card -->
+        <div
+          class="relative p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
+          <div
+            class="absolute -top-8 left-8 w-16 h-16 border-3 border-white bg-indigo-50 rounded-2xl flex items-center justify-center shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <div class="mt-4">
+            <h3 class="text-xl font-semibold text-[#121a29] mb-3">Secure Payment</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Experience safe and secure transactions with our encrypted
+              systems.</p>
+          </div>
+        </div>
+  
+        <!-- Returns Card -->
+        <div
+          class="relative p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
+          <div
+            class="absolute -top-8 left-8 w-16 h-16 border-3 border-white bg-indigo-50 rounded-2xl flex items-center justify-center shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M16 15v-1a4 4 0 00-4-4H8m0 0l3 3m-3-3l3-3m9 14V5a2 2 0 00-2-2H6a2 2 0 00-2 2v16l4-2 4 2 4-2 4 2z" />
+            </svg>
+          </div>
+          <div class="mt-4">
+            <h3 class="text-xl font-semibold text-[#121a29] mb-3">Easy Returns</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Not satisfied? Return your products easily within 30 days of
+              purchase.</p>
+          </div>
+        </div>
+  
       </div>
     </div>
   </section>
-</main>
 
-  
+
 </body>
 
 </html>
