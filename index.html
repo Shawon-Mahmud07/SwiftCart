@@ -76,7 +76,7 @@
   </header>
 
 
-<!-- ===========================================Hero Section================================= -->
+  <!-- ===========================================Hero Section================================= -->
   <main>
     <!-- Hero Section: Background Image with Gradient Overlay -->
     <section class="relative min-h-[620px] lg:min-h-[650px] flex items-center overflow-hidden">
@@ -117,16 +117,16 @@
   <!--======================================== Why Choose Us Section========================= -->
   <section class="py-20 bg-gray-50 ">
     <div class="container mx-auto px-6 lg:px-12">
-  
+
       <!-- Section Header -->
       <div class="text-center mb-16">
         <h2 class="text-4xl font-extrabold text-[#121a29] mb-4">Why Choose Us</h2>
         <p class="text-gray-500 ">We provide the best shopping experience with top-notch services.</p>
       </div>
-  
+
       <!-- Feature Cards Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
-  
+
         <!-- Delivery Card -->
         <div
           class="relative p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
@@ -144,7 +144,7 @@
               efficiently.</p>
           </div>
         </div>
-  
+
         <!-- Support Card -->
         <div
           class="relative p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
@@ -158,11 +158,12 @@
           </div>
           <div class="mt-4">
             <h3 class="text-xl font-semibold text-[#121a29] mb-3">24/7 Support</h3>
-            <p class="text-gray-500 text-sm leading-relaxed">Our support team is available around the clock to assist you
+            <p class="text-gray-500 text-sm leading-relaxed">Our support team is available around the clock to assist
+              you
               anytime.</p>
           </div>
         </div>
-  
+
         <!-- Security Card -->
         <div
           class="relative p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
@@ -180,7 +181,7 @@
               systems.</p>
           </div>
         </div>
-  
+
         <!-- Returns Card -->
         <div
           class="relative p-8 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
@@ -194,35 +195,37 @@
           </div>
           <div class="mt-4">
             <h3 class="text-xl font-semibold text-[#121a29] mb-3">Easy Returns</h3>
-            <p class="text-gray-500 text-sm leading-relaxed">Not satisfied? Return your products easily within 30 days of
+            <p class="text-gray-500 text-sm leading-relaxed">Not satisfied? Return your products easily within 30 days
+              of
               purchase.</p>
           </div>
         </div>
-  
+
       </div>
     </div>
   </section>
 
   <!-- ========================================Trending Now========================= -->
-<section class="py-16 bg-white">
-  <div class="container mx-auto px-6 lg:px-12">
+  <!-- Trending Products Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 lg:px-12">
+      <!-- Section Title -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-[#121a29] mb-0 lg:mb-2">Trending Now</h2>
+        </div>
 
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-      <div>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-[#121a29] mb-0 lg:mb-2">Trending Now</h2>
       </div>
-      
+<!-- Product Grid Container: Target for JS injection -->
+      <div id="trending-products" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="h-96 bg-gray-200 animate-pulse rounded-2xl"></div>
+        <div class="h-96 bg-gray-200 animate-pulse rounded-2xl"></div>
+        <div class="h-96 bg-gray-200 animate-pulse rounded-2xl"></div>
+      </div>
     </div>
+  </section>
 
-    <div id="trending-products" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="h-96 bg-gray-200 animate-pulse rounded-2xl"></div>
-      <div class="h-96 bg-gray-200 animate-pulse rounded-2xl"></div>
-      <div class="h-96 bg-gray-200 animate-pulse rounded-2xl"></div>
-    </div>
-  </div>
-</section>
-
-<script src="./js/app.js"></script>
+  <script src="./js/app.js"></script>
 </body>
 
 </html>
