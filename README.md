@@ -1,58 +1,54 @@
-## 1) What is the difference between null and undefined?
+# SwiftCart 🛒
 
-এই দুইটা নিয়ে শুরুতে অনেক কনফিউশন ছিল।
+A modern e-commerce shopping website built with HTML, Tailwind CSS, and JavaScript.
 
-**undefined** মানে হচ্ছে ভ্যারিয়েবল আছে, কিন্তু এখনো কোনো ভ্যালু দেওয়া হয়নি। সাধারণত এটা JavaScript নিজেই সেট করে।
+## Features
 
-আর **null** হচ্ছে ইচ্ছা করে খালি রাখা। মানে আমি নিজে বলছি—এখানে এখন কোনো ভ্যালু নেই।
+- 📱 **Responsive Design** - Works seamlessly on mobile, tablet, and desktop
+- 🛍️ **Product Catalog** - Browse and shop trending products
+- 🔍 **Product Details** - View detailed product information in modal
+- 🛒 **Shopping Cart** - Add items to your cart
+- ✨ **Modern UI** - Beautiful, clean interface with smooth animations
 
-সহজভাবে:
-- undefined → নিজে থেকে হয়  
-- null → আমি ইচ্ছা করে সেট করি  
+## Tech Stack
 
----
+- **HTML5** - Semantic markup
+- **Tailwind CSS** - Utility-first CSS framework
+- **JavaScript** - Interactive functionality
+- **DaisyUI** - Component library for Tailwind
+- **Font Awesome** - Icon library
 
-## 2) What is the use of the map() function in JavaScript? How is it different from forEach()?
+## Getting Started
 
-দুটোই অ্যারের উপর কাজ করে, তাই প্রথমে একই মনে হয়।
+1. Clone the repository:
+```
+bash
+git clone https://github.com/Shawon-Mahmud07/SwiftCart.git
+```
 
-**map()** ব্যবহার করি যখন একটি অ্যারের ডেটা পরিবর্তন করে নতুন একটি অ্যারে বানাতে চাই।
+2. Open `index.html` in your browser
 
-আর **forEach()** শুধু এক এক করে আইটেম নিয়ে কাজ করে দেয়, কিন্তু নতুন কিছু রিটার্ন করে না।
+## Project Structure
 
-আমি যেভাবে মনে রাখি:
-- নতুন অ্যারে দরকার হলে → map()  
-- শুধু কাজ করাতে হলে → forEach()  
+```
+SwiftCart/
+├── index.html          # Main landing page
+├── products.html      # Products catalog page
+├── tailwind.config.js  # Tailwind configuration
+├── styles/
+│   └── style.css       # Custom styles
+├── js/
+│   ├── app.js          # Main JavaScript
+│   └── products.js     # Products data and logic
+└── Assets/
+    └── banner-image.png
+```
 
----
+## Pages
 
-## 3) What is the difference between == and ===?
+- **Home** (`index.html`) - Hero section, features, trending products
+- **Products** (`products.html`) - Full product catalog
 
-এখানে একটু সাবধান থাকি সবসময়:
+## License
 
-**==** শুধু মান তুলনা করে, টাইপ না। দরকার হলে টাইপ কনভার্ট করে নেই।
-
-**===** মান এবং টাইপ—দুটোই চেক করে।  
-
-বাগ এড়াতে সাধারণত **===** ব্যবহার করাই ভালো অভ্যাস বলে আমি মনে করি।
-
----
-
-## 4) What is the significance of async/await in fetching API data?
-
-API থেকে ডাটা সাথে সাথে আসে না, একটু সময় লাগে।  
-
-**async/await** ব্যবহার করলে এই asynchronous কাজগুলো অনেক পরিষ্কারভাবে লেখা যায়। কোড দেখতে সিরিয়ালের মতো লাগে—ধাপে ধাপে চলছে মনে হয়।
-
-এতে error handle করাও সহজ হয়, তাই modern JavaScript-এ এটা খুব গুরুত্বপূর্ণ।
-
----
-
-## 5) Explain the concept of Scope in JavaScript (Global, Function, Block).
-
-Scope মানে হচ্ছে—একটা ভ্যারিয়েবল কোডের কতটুকু জায়গায় ব্যবহার করা যাবে।
-
-- **Global Scope** → পুরো কোডে এক্সেস করা যায়  
-- **Function Scope** → শুধু নির্দিষ্ট ফাংশনের ভেতরে কাজ করা যায় 
-- **Block Scope** → নির্দিষ্ট `{}` এর ভেতরে সীমাবদ্ধ  
-
+MIT License
