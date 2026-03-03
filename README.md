@@ -46,6 +46,9 @@ SwiftCart/
 
 ## Pages
 
-- **Home** (`index.html`) - Hero section, features, trending products
-- **Products** (`products.html`) - Full product catalog
+- **Home** (`index.html`) - Hero section, features, trending products.
+- **Products** (`products.html`) - Full product catalog page with filtering and sorting options.
 
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.

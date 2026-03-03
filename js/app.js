@@ -62,33 +62,27 @@ async function fetchTrendingProducts() {
 // Initial call to load products on page load
 fetchTrendingProducts();
 
-
-
-
-
-
-
 /**
  * Fetches single product data and displays it in a stylized modal
  */
 async function showProductDetails(id) {
-    const modal = document.getElementById('product-modal');
-    const modalBox = document.getElementById('modal-box');
-    const modalContent = document.getElementById('modal-content');
-    
-    // Open modal and apply scale-in animation
-    modal.classList.remove('hidden');
-    setTimeout(() => modalBox.classList.remove('scale-95'), 10);
-    
-    // Loading state
-    modalContent.innerHTML = `<div class="p-20 text-center"><span class="loading loading-spinner loading-lg text-indigo-600"></span></div>`;
+  const modal = document.getElementById("product-modal");
+  const modalBox = document.getElementById("modal-box");
+  const modalContent = document.getElementById("modal-content");
 
-    try {
-        const res = await fetch(`https://fakestoreapi.com/products/${id}`);
-        const product = await res.json();
+  // Open modal and apply scale-in animation
+  modal.classList.remove("hidden");
+  setTimeout(() => modalBox.classList.remove("scale-95"), 10);
 
-        // Inject dynamic product details into modal body
-        modalContent.innerHTML = `
+  // Loading state
+  modalContent.innerHTML = `<div class="p-20 text-center"><span class="loading loading-spinner loading-lg text-indigo-600"></span></div>`;
+
+  try {
+    const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+    const product = await res.json();
+
+    // Inject dynamic product details into modal body
+    modalContent.innerHTML = `
             <div class="flex flex-col md:flex-row gap-8 p-8 text-left">
                 <div class="md:w-1/2 bg-gray-100 rounded-2xl p-6 flex items-center justify-center">
                     <img src="${product.image}" class="max-h-72 object-contain">
@@ -116,15 +110,15 @@ async function showProductDetails(id) {
                 </div>
             </div>
         `;
-    } catch (error) {
-        modalContent.innerHTML = `<p class="p-10 text-center text-red-500">Something went wrong!</p>`;
-    }
+  } catch (error) {
+    modalContent.innerHTML = `<p class="p-10 text-center text-red-500">Something went wrong!</p>`;
+  }
 }
 
 /**
  * Hides the product details modal
  */
 function closeModal() {
-    const modal = document.getElementById('product-modal');
-    modal.classList.add('hidden');
+  const modal = document.getElementById("product-modal");
+  modal.classList.add("hidden");
 }

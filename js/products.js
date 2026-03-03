@@ -22,6 +22,7 @@ async function loadCategories() {
     });
   } catch (error) {
     console.error("Error loading categories:", error);
+    
   }
 }
 
@@ -32,6 +33,7 @@ async function filterByCategory(category, btn) {
   // Reset all buttons to default styling
   const allBtns = categoryContainer.querySelectorAll("button");
   allBtns.forEach((b) => {
+    
     b.className =
       "px-6 py-2 rounded-full border border-gray-200 bg-white text-gray-700 text-sm font-medium shadow-sm hover:bg-gray-50 transition-all capitalize";
   });
@@ -109,33 +111,26 @@ async function fetchAndDisplayProducts(url) {
 loadCategories();
 fetchAndDisplayProducts("https://fakestoreapi.com/products");
 
-
-
-
-
-
-
 /**
  * Fetches single product data and displays it in a stylized modal
  */
 async function showProductDetails(id) {
-    const modal = document.getElementById('product-modal');
-    const modalBox = document.getElementById('modal-box');
-    const modalContent = document.getElementById('modal-content');
-    
-    // Open modal and apply scale-in animation
-    modal.classList.remove('hidden');
-    setTimeout(() => modalBox.classList.remove('scale-95'), 10);
-    
-    // Loading state
-    modalContent.innerHTML = `<div class="p-20 text-center"><span class="loading loading-spinner loading-lg text-indigo-600"></span></div>`;
+  const modal = document.getElementById("product-modal");
+  const modalBox = document.getElementById("modal-box");
+  const modalContent = document.getElementById("modal-content");
+  // Open modal and apply scale-in animation
+  modal.classList.remove("hidden");
+  setTimeout(() => modalBox.classList.remove("scale-95"), 10);
 
-    try {
-        const res = await fetch(`https://fakestoreapi.com/products/${id}`);
-        const product = await res.json();
+  // Loading state
+  modalContent.innerHTML = `<div class="p-20 text-center"><span class="loading loading-spinner loading-lg text-indigo-600"></span></div>`;
 
-        // Inject dynamic product details into modal body
-        modalContent.innerHTML = `
+  try {
+    const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+    const product = await res.json();
+
+    // Inject dynamic product details into modal body
+    modalContent.innerHTML = `
             <div class="flex flex-col md:flex-row gap-8 p-8 text-left">
                 <div class="md:w-1/2 bg-gray-100 rounded-2xl p-6 flex items-center justify-center">
                     <img src="${product.image}" class="max-h-72 object-contain">
@@ -157,21 +152,27 @@ async function showProductDetails(id) {
                             </button>
                             <button class="px-6 py-4 border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors">
                                 <i class="fa-solid fa-cart-plus text-gray-700 text-lg"></i>
+                              
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
+            
         `;
-    } catch (error) {
-        modalContent.innerHTML = `<p class="p-10 text-center text-red-500">Something went wrong!</p>`;
-    }
+  } catch (error) {
+    modalContent.innerHTML = `<p class="p-10 text-center text-red-500">Something went wrong!</p>`;
+  }
 }
 
 /**
  * Hides the product details modal
  */
+
 function closeModal() {
-    const modal = document.getElementById('product-modal');
-    modal.classList.add('hidden');
+  const modal = document.getElementById("product-modal");
+  modal.classList.add("hidden");
 }
+
+
+
