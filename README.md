@@ -21,16 +21,16 @@ A modern e-commerce shopping website built with HTML, Tailwind CSS, and JavaScri
 ## Getting Started
 
 1. Clone the repository:
-```
-bash
+
+```bash
 git clone https://github.com/Shawon-Mahmud07/SwiftCart.git
 ```
 
-2. Open `index.html` in your browser
+1. Open `index.html` in your browser
 
 ## Project Structure
 
-```
+```text
 SwiftCart/
 ├── index.html          # Main landing page
 ├── products.html      # Products catalog page
