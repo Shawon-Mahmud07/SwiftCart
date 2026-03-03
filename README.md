@@ -49,6 +49,3 @@ SwiftCart/
 - **Home** (`index.html`) - Hero section, features, trending products
 - **Products** (`products.html`) - Full product catalog
 
-## License
-
-MIT License
