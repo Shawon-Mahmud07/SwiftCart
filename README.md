@@ -52,3 +52,13 @@ SwiftCart/
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Demo
+
+Check out the live demo of SwiftCart:
+
+[Live Demo Link](https://swiftcart-mart.netlify.app)
