@@ -1,22 +1,27 @@
-# SwiftCart 🛒
+# SwiftCart
 
-A modern e-commerce shopping website built with HTML, Tailwind CSS, and JavaScript.
+SwiftCart is a modern, responsive e-commerce front-end built with HTML, Tailwind CSS, and vanilla JavaScript. It focuses on clean UI, fast browsing, and a practical shopping-flow demo (catalog -> details -> cart) without requiring a backend.
 
 ## Features
 
-- 📱 **Responsive Design** - Works seamlessly on mobile, tablet, and desktop
-- 🛍️ **Product Catalog** - Browse and shop trending products
-- 🔍 **Product Details** - View detailed product information in modal
-- 🛒 **Shopping Cart** - Add items to your cart
-- ✨ **Modern UI** - Beautiful, clean interface with smooth animations
+- Responsive layout for mobile, tablet, and desktop
+- Product catalog (trending section + full products page)
+- Product details modal (quick view without leaving the page)
+- Shopping cart UI (add-to-cart interactions + cart count)
+- Modern UI using Tailwind CSS + DaisyUI components
+
+## What This Project Is (and Isn't)
+
+- Is: a front-end UI demo you can open in a browser and extend
+- Isn't: a production store (no auth, payments, or real checkout)
 
 ## Tech Stack
 
-- **HTML5** - Semantic markup
-- **Tailwind CSS** - Utility-first CSS framework
-- **JavaScript** - Interactive functionality
-- **DaisyUI** - Component library for Tailwind
-- **Font Awesome** - Icon library
+- HTML5
+- Tailwind CSS
+- JavaScript (vanilla)
+- DaisyUI (Tailwind component library)
+- Font Awesome (icons)
 
 ## Getting Started
 
@@ -26,35 +31,43 @@ A modern e-commerce shopping website built with HTML, Tailwind CSS, and JavaScri
 git clone https://github.com/Shawon-Mahmud07/SwiftCart.git
 ```
 
-1. Open `index.html` in your browser
+2. Open `index.html` in your browser.
+
+Optional (recommended): run with a local static server (helps with relative paths and future API work).
+
+- VS Code: install "Live Server" -> right click `index.html` -> "Open with Live Server"
 
 ## Project Structure
 
 ```text
 SwiftCart/
-├── index.html          # Main landing page
-├── products.html      # Products catalog page
-├── tailwind.config.js  # Tailwind configuration
-├── styles/
-│   └── style.css       # Custom styles
-├── js/
-│   ├── app.js          # Main JavaScript
-│   └── products.js     # Products data and logic
-└── Assets/
-    └── banner-image.png
+|-- index.html          # Home page (hero, features, trending products)
+|-- products.html       # Products catalog page
+|-- tailwind.config.js  # Tailwind configuration (if you later build locally)
+|-- styles/
+|   `-- style.css       # Custom CSS overrides
+|-- js/
+|   |-- app.js          # Home page behaviors (trending + modal)
+|   `-- products.js     # Product data and catalog logic
+`-- Assets/
+    `-- banner-image.png
 ```
 
 ## Pages
 
-- **Home** (`index.html`) - Hero section, features, trending products.
-- **Products** (`products.html`) - Full product catalog page with filtering and sorting options.
+- Home (`index.html`): hero section, trust features, trending products, about, contact
+- Products (`products.html`): full catalog browsing experience
+
+## Common Customizations
+
+- Theme/colors: update Tailwind utility classes in `index.html` and `products.html`
+- Products: edit the data and rendering logic in `js/products.js`
+- Layout: tweak `container`, `grid`, and `gap-*` classes for spacing and responsiveness
 
 ## Contributing
 
-Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+Contributions are welcome. Fork the repo and open a pull request with a clear description and screenshots when relevant.
 
 ## Demo
 
-Check out the live demo of SwiftCart:
-
-[Live Demo Link](https://swiftcart-mart.netlify.app)
+Live demo: <https://swiftcart-mart.netlify.app>
